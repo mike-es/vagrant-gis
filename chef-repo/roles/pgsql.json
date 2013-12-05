@@ -1,0 +1,11 @@
+{
+    "name": "pgsql",
+    "json_class": "Chef::Role",
+    "chef_type": "role",
+    "override_attributes": {
+        
+    },
+    "run_list": {
+
+    }
+}
