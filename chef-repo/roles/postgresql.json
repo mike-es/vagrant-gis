@@ -1,0 +1,45 @@
+{
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "name": "postgresql",
+    "override_attributes": {
+        "postgresql": {
+            "version": "9.3",
+            "enable_pgdg_yum": true,
+            "dir": "/var/lib/pgsql/9.3/data",
+            "client": {
+                "packages": [
+                    "postgresql93"
+                ]
+            },
+            "server": {
+                "packages": [
+                    "postgresql93-server",
+                    "postgis2_93"
+                ],
+                "service_name": "postgresql-9.3"
+            },
+            "contrib": {
+                "packages": [
+                    "postgresql93-contrib"
+                ]
+            },
+            "pg_hba": [
+                {
+                    "addr": "192.168.56.0/24",
+                    "db": "all",
+                    "method": "trust",
+                    "type": "host",
+                    "user": "all"
+                }
+            ],
+            "password": {
+                "postgres": "3175bce1d3201d16594cebf9d7eb3f9d"
+            }
+        }
+    },
+    "run_list": [
+        "recipe[postgresql::server]",
+        "recipe[postgresql::contrib]"
+    ]
+}

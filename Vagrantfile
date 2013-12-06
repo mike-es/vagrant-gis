@@ -53,43 +53,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # information on available options.
 
   config.vm.provision :shell, :inline => "service iptables stop && chkconfig iptables off"
+  config.vm.provision :shell, :inline => "cd /tmp && wget -q http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm && rpm -Uvh epel-release-6-8.noarch.rpm; rm -f epel-release-6-8.noarch.rpm"
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = "chef-repo/cookbooks"
     chef.roles_path = "chef-repo/roles"
     #chef.data_bags_path = "../my-recipes/data_bags"
     
-    chef.add_recipe "postgresql::server"
-    chef.add_recipe "postgresql::contrib"
+    chef.add_role "postgresql"
     chef.json = {
         'postgresql' => {
-            'enable_pgdg_yum' => true,
-            'version' => '9.3',
-            'dir' => '/var/lib/pgsql/9.3/data',
-            'password' => {
-                'postgres' => '3175bce1d3201d16594cebf9d7eb3f9d'
-            },
             'config' => {
                 'listen_addresses' => server_ip
-            },  
-            'pg_hba' => [
-                {
-                    'type' => 'host',
-                    'db' => 'all',
-                    'user' => 'all',
-                    'addr' => '192.168.56.0/24',
-                    'method' => 'trust'
-                }
-            ],
-            'client' => {
-                'packages' => ['postgresql93']
-            },
-            'server' => {
-                'packages' => ['postgresql93-server'],
-                'service_name' => 'postgresql-9.3'
-            },
-            'contrib' => {
-                'packages' => ['postgresql93-contrib']
             }
         }
     }
