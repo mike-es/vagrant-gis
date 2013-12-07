@@ -10,3 +10,9 @@
 [submodule "chef-repo/cookbooks/tomcat"]
 	path = chef-repo/cookbooks/tomcat
 	url = https://github.com/opscode-cookbooks/tomcat.git
+[submodule "chef-repo/cookbooks/build-essential"]
+	path = chef-repo/cookbooks/build-essential
+	url = https://github.com/opscode-cookbooks/build-essential.git
+[submodule "chef-repo/cookbooks/openssl"]
+	path = chef-repo/cookbooks/openssl
+	url = https://github.com/opscode-cookbooks/openssl.git
