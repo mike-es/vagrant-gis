@@ -7,7 +7,8 @@
             "jdk_version": "7"
         },
         "geoserver": {
-            "download_url": "http://ares.boundlessgeo.com/geoserver/2.4.x/geoserver-2.4.x-latest-war.zip",
+            "download_url": "http://sourceforge.net/projects/geoserver/files/GeoServer/2.4.2/geoserver-2.4.2-war.zip",
+            "download_url-latest": "http://ares.boundlessgeo.com/geoserver/2.4.x/geoserver-2.4.x-latest-war.zip",
             "prefix": "geoserver"
         }
     },

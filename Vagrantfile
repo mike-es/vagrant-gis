@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provider :virtualbox do |vb|
     # Don't boot with headless mode
-    vb.gui = true
+    #vb.gui = true
   
     # Use VBoxManage to customize the VM. For example to change memory:
     vb.customize ["modifyvm", :id, "--memory", "1024"]
@@ -40,5 +40,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         }
     }
   end
+
+  config.vm.provision :shell, :inline => "chkconfig --add postgresql-9.3"
 
 end
