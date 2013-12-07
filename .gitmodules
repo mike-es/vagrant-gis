@@ -4,3 +4,9 @@
 [submodule "chef-repo/cookbooks/postgis"]
 	path = chef-repo/cookbooks/postgis
 	url = git@github.com:mike-es/chef-postgis.git
+[submodule "chef-repo/cookbooks/java"]
+	path = chef-repo/cookbooks/java
+	url = https://github.com/opscode-cookbooks/java.git
+[submodule "chef-repo/cookbooks/tomcat"]
+	path = chef-repo/cookbooks/tomcat
+	url = https://github.com/opscode-cookbooks/tomcat.git
