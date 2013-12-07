@@ -30,7 +30,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.cookbooks_path = "chef-repo/cookbooks"
     chef.roles_path = "chef-repo/roles"
     
-    chef.add_role "postgresql"
+    chef.add_role "postgis"
     chef.add_role "geoserver"
     chef.json = {
         'postgresql' => {

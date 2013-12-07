@@ -1,7 +1,7 @@
 {
     "chef_type": "role",
     "json_class": "Chef::Role",
-    "name": "postgresql",
+    "name": "postgis",
     "override_attributes": {
         "postgresql": {
             "version": "9.3",
