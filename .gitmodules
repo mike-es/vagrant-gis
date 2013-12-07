@@ -1,0 +1,3 @@
+[submodule "chef-repo/cookbooks/postgresql"]
+	path = chef-repo/cookbooks/postgresql
+	url = https://github.com/mike-es/vagrant-gis.git
