@@ -14,8 +14,7 @@
             },
             "server": {
                 "packages": [
-                    "postgresql93-server",
-                    "postgis2_93"
+                    "postgresql93-server"
                 ],
                 "service_name": "postgresql-9.3"
             },
@@ -23,6 +22,9 @@
                 "packages": [
                     "postgresql93-contrib"
                 ]
+            },
+            "config": {
+                "listen_addresses": "0.0.0.0"
             },
             "pg_hba": [
                 {
@@ -36,10 +38,13 @@
             "password": {
                 "postgres": "3175bce1d3201d16594cebf9d7eb3f9d"
             }
+        },
+        "postgis": {
+            "packages": ["postgis2_93"]
         }
     },
     "run_list": [
-        "recipe[postgresql::server]",
+        "recipe[postgis]",
         "recipe[postgresql::contrib]"
     ]
 }

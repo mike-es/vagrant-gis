@@ -4,6 +4,7 @@
 [submodule "chef-repo/cookbooks/postgis"]
 	path = chef-repo/cookbooks/postgis
 	url = git@github.com:mike-es/chef-postgis.git
+	branch = rhel-centos
 [submodule "chef-repo/cookbooks/java"]
 	path = chef-repo/cookbooks/java
 	url = https://github.com/opscode-cookbooks/java.git
@@ -16,3 +17,6 @@
 [submodule "chef-repo/cookbooks/openssl"]
 	path = chef-repo/cookbooks/openssl
 	url = https://github.com/opscode-cookbooks/openssl.git
+[submodule "chef-repo/cookbooks/yum"]
+	path = chef-repo/cookbooks/yum
+	url = https://github.com/opscode-cookbooks/yum.git

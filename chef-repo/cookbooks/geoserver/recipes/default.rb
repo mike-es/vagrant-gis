@@ -23,7 +23,7 @@ if ! node.geoserver.download_url.nil? then
   # Download the file.
   remote_file "/tmp/#{war_filename}" do
     source node.geoserver.download_url
-    action :create
+    action :create_if_missing
   end
 
   # Unzip it (if a zip file).
@@ -38,7 +38,7 @@ if ! node.geoserver.download_url.nil? then
       code <<-EOH
       mkdir geoserver
       cd geoserver
-      unzip ../#{war_filename}
+      unzip -o ../#{war_filename}
       EOH
 
       # This is standard.
