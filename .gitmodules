@@ -3,7 +3,7 @@
 	url = https://github.com/hw-cookbooks/postgresql.git
 [submodule "chef-repo/cookbooks/postgis"]
 	path = chef-repo/cookbooks/postgis
-	url = git@github.com:mike-es/chef-postgis.git
+	url = https://github.com/mike-es/chef-postgis.git
 	branch = rhel-centos
 [submodule "chef-repo/cookbooks/java"]
 	path = chef-repo/cookbooks/java
