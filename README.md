@@ -17,5 +17,5 @@ git clone --recursive https://github.com/mike-es/vagrant-gis.git
 ###PostgreSQL
 
 | Username | Password |
-|---------------------|
+|----------|----------|
 | postgres | postgres |
