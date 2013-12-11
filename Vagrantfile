@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-server_ip = '192.168.56.100'
+server_ip = '192.168.56.101'
 
 Vagrant.configure("2") do |config|
   config.vm.box = "centos65_64"
